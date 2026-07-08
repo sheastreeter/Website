@@ -1,0 +1,26 @@
+<script>
+// Assemble the email address at runtime from split data-attributes so the full
+// address never appears as one contiguous string in the page source for scrapers.
+(function () {
+  function build() {
+    document.querySelectorAll(".email-obf").forEach(function (el) {
+      var user = el.getAttribute("data-user");
+      var domain = el.getAttribute("data-domain");
+      if (!user || !domain) return;
+      var addr = user + "@" + domain; // @ = "@"
+      el.setAttribute("href", "mailto:" + addr);
+      // Show the address as visible text only if asked (data-show), else keep the label.
+      if (el.hasAttribute("data-show")) {
+        el.textContent = addr;
+      }
+      el.removeAttribute("data-user");
+      el.removeAttribute("data-domain");
+    });
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", build);
+  } else {
+    build();
+  }
+})();
+</script>

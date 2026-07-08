@@ -1,0 +1,37 @@
+---
+title: "Teaching"
+description: "Courses and teaching philosophy on the politics of policing, prisons, and race."
+---
+
+I teach the politics of the criminal legal system as a subject students can analyze rigorously and connect directly to their own communities. My signature course, The Politics of Police and Prisons in the U.S., is the only course on the criminal justice system in Michigan's Political Science department, and it regularly fills to capacity with a waitlist. In 2025 I rebuilt the course around specifications grading, replacing letter grades with a mastery-based rubric that lets students revise and resubmit their work until it meets a clear standard. I adopted this model to shift students' attention from chasing points toward genuinely mastering concepts, to reward intellectual risk-taking, and to prepare students for professional settings where work is judged against standards rather than scored. Student evaluations consistently place the course above school and college medians on clarity, respect, and interest in the subject.
+
+I design my courses to move students from abstract analysis to direct engagement with political institutions. In Police and Prisons, students build a semester-long portfolio of projects, including concept maps and an Institutional Power Map that asks them to apply what they learn about courts, police, and prisons to the governance of their own hometowns. I bring practitioners and scholars into the classroom — among them a county sheriff, a former public defender, and faculty from allied fields — so that students see how the system operates in practice. Roughly a third of my assigned readings come from scholars of color and women, and my attendance and accommodation policies are built to support first-generation students, caregivers, and students with disabilities. These choices reflect my conviction that a demanding course and an inclusive one are the same course.
+
+Beyond the classroom, I founded and direct the Violence and Policing Lab, which brings graduate and undergraduate researchers together around the PKAP dataset. Lab members contribute to coding and analyzing the data and, in return, receive sustained mentorship on their own research. We meet monthly for students to present dissertation chapters and independent projects and to receive feedback from me and their peers. The lab creates a structured intellectual community that bridges research training and mentorship, and it has become central to how I support the next generation of scholars. I also advise dissertations, mentor undergraduate researchers, and write extensively for students pursuing law school and careers in the criminal legal field.
+
+## Courses
+
+::: {.course}
+[African Americans and the Politics of Race]{.course-title}<br>
+[University of Michigan · Winter 2026]{.course-terms}
+:::
+
+::: {.course}
+[Abolition in Theory and Practice]{.course-title}<br>
+[University of Michigan · Fall 2024, Winter 2026]{.course-terms}
+:::
+
+::: {.course}
+[The Politics of Police and Prisons in the U.S.]{.course-title}<br>
+[University of Michigan · Fall 2023, Winter 2024, Winter 2025, Fall 2025]{.course-terms}
+:::
+
+::: {.course}
+[Race and Crime Practicum]{.course-title}<br>
+[Center for Comparative Studies in Race and Ethnicity, Stanford University · 2018 · faculty sponsor Jennifer Eberhardt]{.course-terms}
+:::
+
+::: {.course}
+[Stanford Prison Education Project]{.course-title}<br>
+[San Francisco County Jail #5 · 2017]{.course-terms}
+:::

@@ -1,0 +1,84 @@
+---
+title: "Research"
+description: "Publications and working papers on race, police violence, protest, and accountability."
+---
+
+My research explains how communities respond to state violence, and why those responses so often diverge. I combine an original dataset of police killings with interviews, fieldwork, and survey experiments to trace the path from a single death to collective political action. The work spans three strands: a book project on families and the demand for accountability, a set of published articles on racial disparities and public opinion in policing, and ongoing studies of the geography and dynamics of protest. My publications are also listed on [Google Scholar](https://scholar.google.com/citations?user=q2j799YAAAAJ&hl=en){target="_blank"}.
+
+::: {.notebox}
+The summaries below are working descriptions and will be refined. For citations and links, see each entry; for the complete record, see my [CV](cv.qmd).
+:::
+
+## Book project
+
+::: {.pub}
+[Private Tragedy, Public Movement: Families and the Demand for Police Accountability]{.pub-title} [In progress]{.pub-status}
+
+[This book explains why some police killings lead to protest while others do not by placing families at the center of the story. I argue that the decisions families make in the wake of police violence — whether to grieve privately or demand justice publicly — determine when personal loss becomes political mobilization. Drawing on the Police Killings and Protest (PKAP) dataset, interviews, and fieldwork, I develop and test a three-part theory of grievance, bandwidth, and broadcast. The project reveals that movements for police accountability have largely been borne on the efforts of grieving families, reshaping how we understand the Black Lives Matter movement and related mobilizations.]{.pub-desc}
+:::
+
+## Peer-reviewed articles
+
+::: {.pub}
+[Police Abuse or Just Deserts? Deservingness Perceptions and State Violence]{.pub-title}
+
+[Shea Streeter and Mackenzie Israel-Trummel]{.pub-meta}<br>
+[Public Opinion Quarterly]{.pub-venue} 86, no. S1 (June 2022): 499–522.
+
+[Whether Americans condemn an act of police violence depends heavily on whether they judge the victim to have deserved it. Using survey experiments, we show that deservingness perceptions shape public reactions to state violence and help explain why similar killings provoke sharply different responses.]{.pub-desc}
+
+::: {.pub-links}
+[DOI](https://doi.org/10.1093/poq/nfac017){target="_blank"}
+:::
+:::
+
+::: {.pub}
+[Bringing Abolition In: Addressing Carceral Logics in Social Science Research]{.pub-title}
+
+[Jordie Davies, Jenn Jackson, and Shea Streeter]{.pub-meta}<br>
+[Social Science Quarterly]{.pub-venue} (August 2021).
+
+[Social science research can unintentionally reproduce the carceral logics it studies. We argue that taking abolition seriously as an analytic commitment reshapes how scholars frame questions about crime, punishment, and the state, and we offer guidance for research that does not reinscribe carceral harm.]{.pub-desc}
+
+::: {.pub-links}
+[DOI](https://doi.org/10.1111/ssqu.13022){target="_blank"}
+:::
+:::
+
+::: {.pub}
+[Lethal Force in Black and White: Assessing Racial Disparities in the Circumstances of Police Killings]{.pub-title}
+
+[Shea Streeter]{.pub-meta}<br>
+[The Journal of Politics]{.pub-venue} 81, no. 3 (July 2019): 1124–1132.
+
+[Do racial disparities in police killings simply reflect differences in the circumstances of police-civilian encounters? I show that they do not: substantial racial disparities persist even after accounting for the situational context of each killing, pointing to the role of race itself in lethal outcomes.]{.pub-desc}
+
+::: {.pub-links}
+[DOI](https://doi.org/10.1086/703541){target="_blank"}
+:::
+:::
+
+## Working papers & works in progress
+
+::: {.pub}
+[Mobilization Readiness and the Geography of Protest in the 2020 Uprising]{.pub-title} [Working paper]{.pub-status}
+
+[Shea Streeter and Arica Schuett]{.pub-meta}<br>
+[Presented at the 2025 University of San Diego Center for American Politics Conference.]{.pub-meta}
+
+[Why did some U.S. counties mobilize during the 2020 racial-justice uprising while others did not? Merging the Crowd Counting Consortium's record of more than 10,000 protests with county-level data across all 3,100 U.S. counties, we introduce the concept of mobilization readiness — a community's prior experience with collective action. We find that earlier left-leaning protest activity strongly predicted Floyd-era demonstrations, while local rates of police killings did not.]{.pub-desc}
+:::
+
+::: {.pub}
+[From Facebook Posts to Frontlines: An Analysis of Small Protests in the Movement for Black Lives]{.pub-title} [Working paper]{.pub-status}
+
+[Shea Streeter]{.pub-meta}<br>
+[Presented at the 2025 Southern Political Science Association Annual Conference.]{.pub-meta}
+:::
+
+::: {.pub}
+[The Racial Protest Gap: The Acceptability of Police Killings Among White Americans]{.pub-title} [Working paper]{.pub-status}
+
+[Shea Streeter]{.pub-meta}<br>
+[Presented at the 2020 Midwest Political Science Association Annual Conference.]{.pub-meta}
+:::

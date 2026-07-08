@@ -1,0 +1,206 @@
+---
+title: "Police Killings: Data Explorer"
+description: "An interactive explorer for the Police Killings and Protest (PKAP) dataset."
+format:
+  html:
+    include-in-header:
+      text: |
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+---
+
+::: {.notebox}
+**Partial dataset.** This explorer currently loads the geolocated **2015–2016** records — each a real police killing, with demographics, circumstances, and location. The full Police Killings and Protest (PKAP) dataset extends across additional years and adds the protest-outcome coding at the heart of my research; those layers will be connected as they are finalized. Every record here represents a person who was killed. Please explore accordingly.
+:::
+
+This page lets you explore the **Police Killings and Protest (PKAP)** dataset, an original resource I assemble and code with the Violence and Policing Lab. You can filter the cases by year, race and ethnicity, and armed status, and see the results across the map and charts below. Counts of police killings are known to undercount the true total, because no comprehensive official record exists; the methods note at the end describes the data's sources and limitations.
+
+## Explore
+
+```{ojs}
+//| echo: false
+// Load the geolocated PKAP records. When more years or the protest coding are ready,
+// add the files here (same columns) and extend the filters below.
+data2015 = FileAttachment("pkap_geolocated_2015.csv").csv({ typed: true })
+data2016 = FileAttachment("pkap_geolocated_2016.csv").csv({ typed: true })
+raw = [...data2015, ...data2016]
+
+monthNum = new Map([
+  ["January",1],["February",2],["March",3],["April",4],["May",5],["June",6],
+  ["July",7],["August",8],["September",9],["October",10],["November",11],["December",12]
+])
+
+// Derive a Date for the time trend; keep everything else as-is.
+data = raw.map(d => ({
+  ...d,
+  date: new Date(d.year, (monthNum.get(d.month) || 1) - 1, +d.day || 1)
+}))
+```
+
+```{ojs}
+//| echo: false
+// Fixed category order + colors, drawn from the validated data-viz reference palette so
+// the charts and the site theme read as one system. Color follows the group, not its rank.
+groupOrder = ["Black", "White", "Hispanic/Latino", "Asian/Pacific Islander", "Native American", "Arab-American", "Other", "Unknown"]
+groupColor = new Map([
+  ["Black",                  "#2a78d6"],
+  ["White",                  "#eb6834"],
+  ["Hispanic/Latino",        "#4a3aa7"],
+  ["Asian/Pacific Islander", "#1baf7a"],
+  ["Native American",        "#eda100"],
+  ["Arab-American",          "#e87ba4"],
+  ["Other",                  "#898781"],
+  ["Unknown",                "#c3c2b7"]
+])
+color = d => groupColor.get(d) ?? "#898781"
+
+armedOptions = ["All", ...Array.from(new Set(data.map(d => d.armed))).filter(x => x != null && x !== "").sort()]
+```
+
+```{ojs}
+//| echo: false
+viewof selYear = Inputs.select(["All", 2015, 2016], { label: "Year", value: "All" })
+viewof groups = Inputs.checkbox(groupOrder, { value: groupOrder, label: "Race / ethnicity" })
+viewof selArmed = Inputs.select(armedOptions, { label: "Armed status", value: "All" })
+```
+
+```{ojs}
+//| echo: false
+filtered = data.filter(d =>
+  (selYear === "All" || d.year === selYear) &&
+  groups.includes(d.raceethnicity) &&
+  (selArmed === "All" || d.armed === selArmed)
+)
+```
+
+```{ojs}
+//| echo: false
+html`<p class="lead" style="margin-top:0.5rem;">
+  <strong>${filtered.length.toLocaleString()}</strong> cases shown
+  <span style="color:#898781;">of ${data.length.toLocaleString()} total · 2015–2016</span>
+</p>`
+```
+
+### Where cases occurred
+
+```{ojs}
+//| echo: false
+L = require("leaflet@1.9.4")
+```
+
+```{ojs}
+//| echo: false
+baseMap = {
+  const el = html`<div style="height:480px;border-radius:8px;overflow:hidden;border:1px solid rgba(11,11,11,0.10);"></div>`;
+  const m = L.map(el).setView([39.5, -98.35], 4);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 12,
+    attribution: "© OpenStreetMap contributors"
+  }).addTo(m);
+  el.value = m;
+  requestAnimationFrame(() => m.invalidateSize());
+  return el;
+}
+```
+
+```{ojs}
+//| echo: false
+markers = {
+  const m = baseMap.value;
+  const layer = L.layerGroup().addTo(m);
+  invalidation.then(() => layer.remove()); // clear when `filtered` changes
+  for (const d of filtered) {
+    if (!Number.isFinite(d.lat) || !Number.isFinite(d.lon)) continue;
+    const c = color(d.raceethnicity);
+    L.circleMarker([d.lat, d.lon], {
+      radius: 4, color: c, weight: 1, fillColor: c, fillOpacity: 0.55
+    })
+      .bindTooltip(
+        `<strong>${d.name ?? "Name unavailable"}</strong>` +
+        `${d.age ? ", " + d.age : ""}<br>` +
+        `${d.raceethnicity} · ${d.gender ?? ""}<br>` +
+        `${d.city ?? ""}, ${d.state ?? ""} · ${d.year}<br>` +
+        `${d.classification ?? ""} · armed: ${d.armed ?? "Unknown"}`
+      )
+      .addTo(layer);
+  }
+  return layer;
+}
+```
+
+### Cases by month
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  height: 280,
+  marginLeft: 48,
+  x: { label: null },
+  y: { label: "Cases", grid: true },
+  marks: [
+    Plot.rectY(filtered, Plot.binX({ y: "count" }, {
+      x: "date", interval: "month", fill: "#4a3aa7", rx: 2,
+      title: g => g.length ? `${g.length} cases` : ""
+    })),
+    Plot.ruleY([0])
+  ]
+})
+```
+
+### Cases by race and ethnicity
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  height: 320,
+  marginLeft: 150,
+  x: { label: "Cases", grid: true },
+  y: { label: null },
+  color: { domain: groupOrder, range: groupOrder.map(color), legend: true },
+  marks: [
+    Plot.barX(filtered, Plot.groupY({ x: "count" }, {
+      y: "raceethnicity", fill: "raceethnicity", rx: 2,
+      sort: { y: "x", reverse: true },
+      title: g => `${g[0].raceethnicity}: ${g.length} cases`
+    })),
+    Plot.ruleX([0])
+  ]
+})
+```
+
+### Cases by cause
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  height: 260,
+  marginLeft: 150,
+  x: { label: "Cases", grid: true },
+  y: { label: null },
+  marks: [
+    Plot.barX(filtered, Plot.groupY({ x: "count" }, {
+      y: "classification", fill: "#52514e", rx: 2,
+      sort: { y: "x", reverse: true },
+      title: g => `${g[0].classification}: ${g.length} cases`
+    })),
+    Plot.ruleX([0])
+  ]
+})
+```
+
+### Table
+
+```{ojs}
+//| echo: false
+Inputs.table(filtered, {
+  columns: ["name", "age", "raceethnicity", "gender", "city", "state", "year", "classification", "armed"],
+  header: {
+    name: "Name", age: "Age", raceethnicity: "Race / ethnicity", gender: "Gender",
+    city: "City", state: "State", year: "Year", classification: "Cause", armed: "Armed"
+  },
+  sort: "date", reverse: true
+})
+```
+
+## Methods & limitations
+
+*This section will be completed with the full dataset's documentation.* The Police Killings and Protest (PKAP) dataset records police killings in the United States, geolocates each case, and — in its complete form — codes each for whether it was followed by protest. The records shown here cover **2015 and 2016** and are compiled from public records and journalistic sources; my research team arbitrates each coding decision. Counts of police killings undercount the true total, because no comprehensive official record exists, and categories such as race, ethnicity, and armed status carry their own measurement uncertainty. I will state the full coverage window, sources, and coding rules here, and I will publish only the variables designated for public release. Because each record is a person who was killed, I ask that the data be used with corresponding care.

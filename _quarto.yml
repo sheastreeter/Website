@@ -1,0 +1,59 @@
+project:
+  type: website
+  output-dir: _site
+  # Render only the site pages. Without this, Quarto also renders README.md,
+  # CLAUDE.md, and LAUNCH_GUIDE.md into public HTML pages (internal notes we
+  # don't want on the live site).
+  render:
+    - "*.qmd"
+    - "data/*.qmd"
+  resources:
+    - CNAME
+    - assets/
+    - images/
+
+website:
+  title: "Shea Streeter"
+  description: >-
+    Shea Streeter is an Assistant Professor of Political Science at the
+    University of Michigan who studies race, police violence, and the politics
+    of protest and accountability.
+  site-url: "https://sheastreeter.com"
+  favicon: images/shea-streeter.jpg
+  navbar:
+    background: primary
+    pinned: true
+    logo-alt: "Shea Streeter"
+    title: "Shea Streeter"
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Research"
+        href: research.qmd
+      - text: "Teaching"
+        href: teaching.qmd
+      - text: "CV"
+        href: cv.qmd
+      - text: "Data: Police Killings"
+        href: data/police-killings.qmd
+    right:
+      - text: "Google Scholar"
+        href: "https://scholar.google.com/citations?user=q2j799YAAAAJ&hl=en"
+        target: _blank
+  page-footer:
+    background: light
+    left: "© 2026 Shea Streeter"
+    center: |
+      [Google Scholar](https://scholar.google.com/citations?user=q2j799YAAAAJ&hl=en){target="_blank"} ·
+      [Contact](#){.email-obf data-user="sashea" data-domain="umich.edu"}
+    right: "University of Michigan"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - theme/custom.scss
+    toc: false
+    smooth-scroll: true
+    link-external-newwindow: true
+    include-after-body: _includes/email-obfuscation.html

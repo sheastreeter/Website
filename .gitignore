@@ -1,0 +1,18 @@
+# Quarto build output
+/_site/
+/.quarto/
+
+# R
+.Rproj.user/
+.Rhistory
+.RData
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Private / non-public data — never commit raw PKAP working files
+/data-src/*_raw.csv
+/data-src/private/
+
+**/*.quarto_ipynb
