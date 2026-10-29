@@ -4,11 +4,17 @@ Personal academic website for Shea Streeter (political scientist; research on ra
 police violence, and public opinion). This file orients Claude Code on the project's
 goals, stack, conventions, and open decisions. Update it as decisions are made.
 
-> **Status (2026-07-02): Scaffolded and rendering.** All core decisions confirmed; the full
-> Quarto site is built with real content and verified to render (see §12 for the progress
-> log). Not yet: live-browser check of the data page, and the site is not yet pushed to
-> GitHub or connected to the domain — those steps require Shea and are laid out in
-> `LAUNCH_GUIDE.md`. Remaining content/data items are in §11.
+> **Status (2026-07-10): LIVE.** The site is published and public at **https://sheastreeter.com**
+> (GitHub repo `github.com/sheastreeter/Website`; deploys via the Actions workflow to the
+> `gh-pages` branch; apex DNS points at GitHub Pages IPs; HTTPS serving). Internal docs
+> (`CLAUDE.md`, `LAUNCH_GUIDE.md`, `README.md`) are correctly excluded from the published
+> site (confirmed 404 live) by the `_quarto.yml` `render:` list. **Open:** Shea plans to fix a
+> few text issues in the content pages, then commit + push (auto-deploys in 1–3 min). Remaining
+> content/data items are in §11; launch history in §12.
+>
+> **Local workflow reminder:** working copy is `C:\Users\sashea\Projects\Website` (outside
+> Dropbox — see §12 env notes). Edit `.qmd` text → `quarto preview` to check → GitHub Desktop
+> Commit to main → Push. Local edits never touch the live site until pushed.
 
 ---
 
@@ -100,7 +106,7 @@ especially on the police-killings page, where public readers matter.
 Built with OJS in a `.qmd` page. Ship in stages toward the full experience.
 
 - **The dataset:** the **Police Killings and Protest (PKAP)** dataset — Shea's original
-  research resource of 3,000+ police-killing cases coded for protest outcomes across
+  research resource of 2,000+ police-killing cases coded for protest outcomes across
   multiple years. It underpins her book project (§ below) and the Violence and Policing
   Lab. **Actively being built and coded right now**, so the web copy is a versioned
   snapshot, not a live pointer to the working file.
@@ -222,6 +228,33 @@ research context) in the Streeter voice._
    teaching copy; add a headshot credit if needed.
 
 ## 12. Build progress log
+
+**2026-10-29 — Shea's text edits applied; data page withheld.**
+- Applied Shea's edits from `Desktop\sheastreeter-website-text.docx` to index/research/teaching/cv.
+  Book title is now *Claiming Justice: Families and the Movement for Police Accountability*.
+  Shea deliberately removed the Facebook-posts and Racial Protest Gap working papers and several
+  older service entries. Kept the newer paper-grounded POQ/SSQ descriptions and abstracts.
+- JOP description rewritten to match the paper's actual (null) finding: circumstances do not
+  predict race (best model 69% vs. 66% baseline); the disparity most likely stems from contact.
+- **Data page withheld:** `_quarto.yml` excludes `data/` (`"!data/"`) and the navbar entry is
+  removed; homepage button and data notebox removed. The file stays in the repo for later.
+- `Streeter_CV.tex` updated to match (Dropbox copy + project copy kept identical). The linked
+  `assets/Streeter_CV.pdf` is now **stale** — it can't be recompiled without `resume.cls`.
+
+**2026-07-10 — Site is LIVE; render-scope fix; project moved out of Dropbox.**
+- **Launched:** Shea completed the `LAUNCH_GUIDE.md` steps — pushed to `github.com/sheastreeter/Website`
+  and connected the domain. Verified live: `sheastreeter.com` → 200, DNS on GitHub Pages IPs
+  (`185.199.108–111.153`), `sheastreeter.github.io/Website` 301-redirects to the apex, HTTPS serving.
+  `gh-pages` deploy branch present; working tree clean (all committed in `b0ec821`).
+- **Dropbox conflict fixed (2026-07-08):** Quarto vs Dropbox file-lock war (`os error 32`) on
+  `.quarto`/`_site`. Resolved by moving the working copy out of Dropbox to
+  `C:\Users\sashea\Projects\Website`; old Dropbox path kept as frozen backup (delete now that it's
+  on GitHub). `quarto render`/`preview` both run clean there. Details in env notes below.
+- **Render-scope fix:** added a `render:` list to `_quarto.yml` (`*.qmd`, `data/*.qmd`) so Quarto
+  no longer publishes `README.md`/`CLAUDE.md`/`LAUNCH_GUIDE.md` as public HTML. Confirmed live:
+  `LAUNCH_GUIDE.html` and `CLAUDE.html` return 404. Site builds exactly 5 pages.
+- **Open when Shea returns:** fix a few text issues in the content `.qmd` pages, then Commit + Push
+  (auto-deploys). No specific edits captured yet.
 
 **2026-07-02 — Full scaffold complete and rendering.**
 - Created Quarto site: `_quarto.yml` (navbar Home/Research/Teaching/CV/Data + Scholar link,

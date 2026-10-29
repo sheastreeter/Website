@@ -3,10 +3,6 @@ title: "Curriculum Vitae"
 description: "Curriculum vitae of Shea Streeter, Assistant Professor of Political Science, University of Michigan."
 ---
 
-<p>
-<a class="btn-brand" href="assets/Streeter_CV.pdf" target="_blank">Download PDF</a>
-</p>
-
 ## Academic appointments
 
 **Assistant Professor**, Department of Political Science, University of Michigan — 2021–present<br>
@@ -20,17 +16,15 @@ description: "Curriculum vitae of Shea Streeter, Assistant Professor of Politica
 ## Other appointments
 
 - Faculty Associate, Center for Political Studies, University of Michigan
-- Fellow, Carr Center for Human Rights Policy, Harvard Kennedy School
 - Faculty Associate, Conflict and Peace, Research and Development (CPRD), University of Michigan
+- Fellow, Carr Center for Human Rights Policy, Harvard Kennedy School — 2022
 
 ## Publications & working papers
 
 - **Police Abuse or Just Deserts? Deservingness Perceptions and State Violence** (with Mackenzie Israel-Trummel). *Public Opinion Quarterly* 86, no. S1 (June 2022): 499–522. [doi.org/10.1093/poq/nfac017](https://doi.org/10.1093/poq/nfac017){target="_blank"}
 - **Bringing Abolition In: Addressing Carceral Logics in Social Science Research** (with Jordie Davies and Jenn Jackson). *Social Science Quarterly* (August 2021). [doi.org/10.1111/ssqu.13022](https://doi.org/10.1111/ssqu.13022){target="_blank"}
 - **Lethal Force in Black and White: Assessing Racial Disparities in the Circumstances of Police Killings.** *The Journal of Politics* 81, no. 3 (July 2019): 1124–1132. [doi.org/10.1086/703541](https://doi.org/10.1086/703541){target="_blank"}
-- **Mobilization Readiness and the Geography of Protest in the 2020 Uprising** (with Arica Schuett). Presented at the 2025 UCSD Center for American Politics Conference.
-- **From Facebook Posts to Frontlines: An Analysis of Small Protests in the Movement for Black Lives.** Presented at 2025 SPSA.
-- **The Racial Protest Gap: The Acceptability of Police Killings Among White Americans.** Presented at 2020 MPSA.
+- **Mobilization Readiness and the Geography of Protest in the 2020 Uprising** (with Arica Schuett). Presented at the 2026 American Political Science Association Conference.
 
 ## Teaching
 
@@ -44,6 +38,7 @@ description: "Curriculum vitae of Shea Streeter, Assistant Professor of Politica
 
 ## Presentations & invited talks
 
+- American Political Science Association Annual Conference — 2026
 - University of San Diego Center for American Politics — 2025
 - Southern Political Science Association Annual Conference — 2025
 - Duke University Racial and Ethnic Politics Speaker Series — 2020
@@ -58,11 +53,3 @@ description: "Curriculum vitae of Shea Streeter, Assistant Professor of Politica
 - Founder and Director, Violence and Policing Lab, University of Michigan
 - UROP Faculty Mentor, College of Literature, Science, and the Arts, University of Michigan — 2019–2022
 - EDGE Mentor to PhD Students, Office of the Vice Provost for Graduate Education, Stanford University — 2015–2019
-- Advisory Council Member, Notre Dame Performing Arts Advisory Council, University of Notre Dame — 2015–2018
-- Challenge Accepted High School Program Mentor, Black Graduate Student Association, Stanford University — 2016–2017
-- Ernest Houston Johnson Scholars Program Mentor, Black Community Services Center, Stanford University — 2016
-- Peer reviewer, *American Political Science Review* and *Perspectives on Politics*
-
-::: {.notebox}
-This page mirrors my print CV. For the formatted version, [download the PDF](assets/Streeter_CV.pdf){target="_blank"}.
-:::

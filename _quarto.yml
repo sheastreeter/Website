@@ -6,7 +6,9 @@ project:
   # don't want on the live site).
   render:
     - "*.qmd"
-    - "data/*.qmd"
+    # Data page (data/police-killings.qmd) is withheld until PKAP is ready;
+    # remove this exclusion and restore the navbar entry below to bring it back.
+    - "!data/"
   resources:
     - CNAME
     - assets/
@@ -34,8 +36,6 @@ website:
         href: teaching.qmd
       - text: "CV"
         href: cv.qmd
-      - text: "Data: Police Killings"
-        href: data/police-killings.qmd
     right:
       - text: "Google Scholar"
         href: "https://scholar.google.com/citations?user=q2j799YAAAAJ&hl=en"

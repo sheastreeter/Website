@@ -212,9 +212,13 @@ These are *not* on your to-do list — bring them to a future session and I'll h
 
 ## Your short checklist
 
-- [ ] Step 1–3: Install Quarto and preview the site locally.
-- [ ] Step 4–6: GitHub account + GitHub Desktop + publish the project.
-- [ ] Step 7: Confirm the deploy ran and set Pages source to `gh-pages`.
-- [ ] Step 8–9: Add the custom domain in GitHub and the 5 DNS records at Namecheap.
-- [ ] Step 10–11: Enforce HTTPS and confirm sheastreeter.com loads.
+> **Launched 2026-07-10 — the site is live at https://sheastreeter.com.** Phases 1–3 are done;
+> everything below is checked off. From here, updates just mean: edit the text, then in GitHub
+> Desktop **Commit to main → Push** (rebuilds in 1–3 min). See "After launch" above.
+
+- [x] Step 1–3: Install Quarto and preview the site locally.
+- [x] Step 4–6: GitHub account + GitHub Desktop + publish the project.
+- [x] Step 7: Confirm the deploy ran and set Pages source to `gh-pages`.
+- [x] Step 8–9: Add the custom domain in GitHub and the 5 DNS records at Namecheap.
+- [x] Step 10–11: Enforce HTTPS and confirm sheastreeter.com loads.
 - [ ] Send Claude the protest-coded / additional-year data when ready.

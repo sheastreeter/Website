@@ -136,6 +136,46 @@ main a { text-underline-offset: 2px; }
 }
 .pub .pub-links a { font-weight: 600; margin-right: 0.9rem; }
 
+// Expandable abstract: native <details>/<summary>, no JS, keyboard-accessible.
+.pub-abstract { margin: 0.35rem 0 0.15rem; }
+.pub-abstract > summary {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: $brand;
+  font-weight: 600;
+  font-size: 0.95rem;
+  list-style: none;              // hide default marker (Firefox)
+  width: fit-content;
+}
+.pub-abstract > summary::-webkit-details-marker { display: none; } // hide marker (WebKit)
+.pub-abstract > summary::before {
+  content: "\25B8";              // ▸ caret, rotates when open
+  display: inline-block;
+  font-size: 0.85em;
+  transition: transform 0.15s ease;
+}
+.pub-abstract[open] > summary::before { transform: rotate(90deg); }
+.pub-abstract > summary:hover { color: $brand-dark; }
+.pub-abstract > summary:focus-visible {
+  outline: 2px solid $brand;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+.pub-abstract .abstract-body {
+  margin: 0.6rem 0 0.2rem;
+  padding-left: 0.95rem;
+  border-left: 3px solid $hairline;
+  color: $ink-2;
+  font-size: 0.98rem;
+}
+.pub-abstract .abstract-body p { margin-bottom: 0.6rem; }
+.pub-abstract .abstract-body p:last-child { margin-bottom: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .pub-abstract > summary::before { transition: none; }
+}
+
 // --- Course / teaching cards --------------------------------------------
 .course {
   padding: 1rem 0;
