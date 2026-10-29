@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -13,10 +13,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -40,10 +43,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-364312ebfc27eddc40eaf85bebcc866a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-8819f64cdc4b224840f681531494e779.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -109,10 +112,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./data/police-killings.html"> 
-<span class="menu-text">Data: Police Killings</span></a>
-  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
@@ -158,15 +157,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>My research explains how communities respond to state violence, and why those responses so often diverge. I combine an original dataset of police killings with interviews, fieldwork, and survey experiments to trace the path from a single death to collective political action. The work spans three strands: a book project on families and the demand for accountability, a set of published articles on racial disparities and public opinion in policing, and ongoing studies of the geography and dynamics of protest. My publications are also listed on <a href="https://scholar.google.com/citations?user=q2j799YAAAAJ&amp;hl=en" target="_blank">Google Scholar</a>.</p>
-<div class="notebox">
-<p>The summaries below are working descriptions and will be refined. For citations and links, see each entry; for the complete record, see my <a href="./cv.html">CV</a>.</p>
-</div>
+<p>My research explains how communities respond to state violence, and why those responses so often diverge. I combine an original dataset of police killings with interviews, fieldwork, and survey experiments to trace the path from a single death to collective political action. The work spans three strands: a book project on families and the demand for accountability, a set of published articles on racial disparities and public opinion in policing, and ongoing studies of the geography and dynamics of protest.</p>
 <section id="book-project" class="level2">
 <h2 class="anchored" data-anchor-id="book-project">Book project</h2>
 <div class="pub">
-<p><span class="pub-title">Private Tragedy, Public Movement: Families and the Demand for Police Accountability</span> <span class="pub-status">In progress</span></p>
-<p><span class="pub-desc">This book explains why some police killings lead to protest while others do not by placing families at the center of the story. I argue that the decisions families make in the wake of police violence — whether to grieve privately or demand justice publicly — determine when personal loss becomes political mobilization. Drawing on the Police Killings and Protest (PKAP) dataset, interviews, and fieldwork, I develop and test a three-part theory of grievance, bandwidth, and broadcast. The project reveals that movements for police accountability have largely been borne on the efforts of grieving families, reshaping how we understand the Black Lives Matter movement and related mobilizations.</span></p>
+<p><span class="pub-title">Claiming Justice: Families and the Movement for Police Accountability</span> <span class="pub-status">In progress</span></p>
+<p><span class="pub-desc">This book explains why some police killings lead to protest while others do not by placing families at the center of the story. I argue that the decisions families make in the wake of police violence — whether to grieve privately or demand justice publicly — determine in part when personal loss becomes political mobilization. Drawing on the Police Killings and Protest (PKAP) dataset, interviews, and fieldwork, I develop and test a three-part theory of grievance, bandwidth, and broadcast. The project reveals that movements for police accountability have largely been borne on the efforts of grieving families, reshaping how we understand the Black Lives Matter movement and related mobilizations.</span></p>
 </div>
 </section>
 <section id="peer-reviewed-articles" class="level2">
@@ -174,7 +170,17 @@ ul.task-list li input[type="checkbox"] {
 <div class="pub">
 <p><span class="pub-title">Police Abuse or Just Deserts? Deservingness Perceptions and State Violence</span></p>
 <p><span class="pub-meta">Shea Streeter and Mackenzie Israel-Trummel</span><br> <span class="pub-venue">Public Opinion Quarterly</span> 86, no. S1 (June 2022): 499–522.</p>
-<p><span class="pub-desc">Whether Americans condemn an act of police violence depends heavily on whether they judge the victim to have deserved it. Using survey experiments, we show that deservingness perceptions shape public reactions to state violence and help explain why similar killings provoke sharply different responses.</span></p>
+<p><span class="pub-desc">Why do Americans demand justice after some acts of police violence but not others? In a survey experiment that randomizes the race and gender of a victim, we find that support for compensating the victim tracks perceived deservingness: it is highest for a White woman and lowest for a Black woman, and Black respondents are 58 percent more likely than White respondents to favor restitution. Whether the public treats state violence as an injustice to be remedied is bound up with race — a dynamic that helps explain why outwardly similar killings provoke such different demands for accountability.</span></p>
+<details class="pub-abstract">
+<summary>
+Abstract
+</summary>
+<div class="abstract-body">
+<p>
+Divergent public responses to police brutality incidents demonstrate that for some, police violence is an injustice that demands remediation, while for others state violence is justice served. We develop a novel survey experiment in which we randomize the race and gender of a victim of police violence, and then provide respondents with an opportunity to establish justice via compensation. We uncover small but consistent effects that financial restitution is most supported for a White female detainee and least supported for a Black female detainee, and this is largely driven by White respondents. Beyond the treatment effects, we show that Black respondents are much more likely to perceive detainees as deserving of restitution; across all treatments, Black respondents are 58 percent more likely than Whites to support a financial settlement. We further show that White respondents’ perceptions of deservingness are highly related to their perceptions of who is at fault for the beating—the detainee or the police—and whether the detainee was involved in crime. Black respondents remain likely to award a settlement even if they think the detainee was at fault and involved in crime. Our results provide further evidence that perceptions of who deserves restorative justice for state violence are entangled with race in targeted ways.
+</p>
+</div>
+</details>
 <div class="pub-links">
 <p><a href="https://doi.org/10.1093/poq/nfac017" target="_blank">DOI</a></p>
 </div>
@@ -182,7 +188,26 @@ ul.task-list li input[type="checkbox"] {
 <div class="pub">
 <p><span class="pub-title">Bringing Abolition In: Addressing Carceral Logics in Social Science Research</span></p>
 <p><span class="pub-meta">Jordie Davies, Jenn Jackson, and Shea Streeter</span><br> <span class="pub-venue">Social Science Quarterly</span> (August 2021).</p>
-<p><span class="pub-desc">Social science research can unintentionally reproduce the carceral logics it studies. We argue that taking abolition seriously as an analytic commitment reshapes how scholars frame questions about crime, punishment, and the state, and we offer guidance for research that does not reinscribe carceral harm.</span></p>
+<p><span class="pub-desc">Social science can unintentionally reproduce the carceral logics it studies, treating police and prisons as fixed features of social life. Drawing on Black feminist and abolitionist thought, we argue that taking abolition seriously as an analytic commitment reframes how scholars ask questions about crime, punishment, and the state, and we press researchers to examine how their own methods and institutions sustain carceral power. The essay grounds a broader commitment in my work: to study state violence on terms that center the people it harms rather than the systems that produce it.</span></p>
+<details class="pub-abstract">
+<summary>
+Abstract
+</summary>
+<div class="abstract-body">
+<p>
+<strong>Objective.</strong> In this essay, we review and offer theoretical groundings and empirical approaches to the study of abolition.
+</p>
+<p>
+<strong>Methods.</strong> We begin by demonstrating the ways police and prisons have been used to exploit and dominate marginalized people and argue that abolition offers a path to finding solutions to public safety and racial justice. We draw from black feminist and abolitionist political thought to show how abolition makes space to upend systems of power and domination and develop systems that address the root causes of violence.
+</p>
+<p>
+<strong>Results.</strong> We assert that abolitionist research will not only focus on activists’ calls for dismantling the police but will also recognize and engage with activists’ proposals for reimagining public safety. We suggest that social scientists who study abolition, American uprisings, and policing must understand the differences between transformative changes based in abolitionist frameworks versus those that center mass incarceration as a societal given and, ultimately, further reproduce the status quo.
+</p>
+<p>
+<strong>Conclusion.</strong> We conclude by suggesting that social scientists must question how researcher practices and universities uphold carceral logics and entrenched hierarchies, determining that abolitionist study will meaningfully engage with the distribution of power.
+</p>
+</div>
+</details>
 <div class="pub-links">
 <p><a href="https://doi.org/10.1111/ssqu.13022" target="_blank">DOI</a></p>
 </div>
@@ -190,7 +215,17 @@ ul.task-list li input[type="checkbox"] {
 <div class="pub">
 <p><span class="pub-title">Lethal Force in Black and White: Assessing Racial Disparities in the Circumstances of Police Killings</span></p>
 <p><span class="pub-meta">Shea Streeter</span><br> <span class="pub-venue">The Journal of Politics</span> 81, no. 3 (July 2019): 1124–1132.</p>
-<p><span class="pub-desc">Do racial disparities in police killings simply reflect differences in the circumstances of police-civilian encounters? I show that they do not: substantial racial disparities persist even after accounting for the situational context of each killing, pointing to the role of race itself in lethal outcomes.</span></p>
+<p><span class="pub-desc">African Americans are nearly three times as likely as White Americans to be killed by police. I ask whether that disparity reflects racial differences in the circumstances of the killings themselves. Applying machine learning to 126 hand-coded variables for 700 police killings from 2015, drawn from the Police Killings and Protest (PKAP) dataset, I find that the decedent’s characteristics, alleged criminal activity, threat level, police actions, and the setting of the encounter do not predict race: the best model classifies race correctly 69 percent of the time, barely above the 66 percent achieved by labeling every decedent White. Once contact occurs, police kill Black and White Americans under largely similar circumstances. The disparity therefore most likely originates in how often African Americans come into contact with police, rather than in what happens during the encounter or in officers’ decisions to shoot. Because only 11 percent of these killings began with a traffic or pedestrian stop, explaining that disproportionate contact requires looking well beyond discretionary stops.</span></p>
+<details class="pub-abstract">
+<summary>
+Abstract
+</summary>
+<div class="abstract-body">
+<p>
+African Americans are nearly three times as likely to be killed by police as whites. This paper examines whether this racial disparity is due in part to racial differences in the circumstances of police killings. To assess whether and how these circumstances predict the race of a decedent, I use machine learning techniques and a novel data set of police killings containing over 120 descriptors. I find that decedent characteristics, criminal activity, threat levels, police actions, and the setting of the lethal interaction are not predictive of race, indicating that the police—given contact—are killing blacks and whites under largely similar circumstances. The findings suggest that the racial disparity in the rate of lethal force is most likely driven by higher rates of police contact among African Americans rather than racial differences in the circumstances of the interaction and officer bias in the application of lethal force.
+</p>
+</div>
+</details>
 <div class="pub-links">
 <p><a href="https://doi.org/10.1086/703541" target="_blank">DOI</a></p>
 </div>
@@ -200,16 +235,8 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="working-papers-works-in-progress">Working papers &amp; works in progress</h2>
 <div class="pub">
 <p><span class="pub-title">Mobilization Readiness and the Geography of Protest in the 2020 Uprising</span> <span class="pub-status">Working paper</span></p>
-<p><span class="pub-meta">Shea Streeter and Arica Schuett</span><br> <span class="pub-meta">Presented at the 2025 University of San Diego Center for American Politics Conference.</span></p>
+<p><span class="pub-meta">Shea Streeter and Arica Schuett</span><br> <span class="pub-meta">Presented at the 2026 American Political Science Association Conference.</span></p>
 <p><span class="pub-desc">Why did some U.S. counties mobilize during the 2020 racial-justice uprising while others did not? Merging the Crowd Counting Consortium’s record of more than 10,000 protests with county-level data across all 3,100 U.S. counties, we introduce the concept of mobilization readiness — a community’s prior experience with collective action. We find that earlier left-leaning protest activity strongly predicted Floyd-era demonstrations, while local rates of police killings did not.</span></p>
-</div>
-<div class="pub">
-<p><span class="pub-title">From Facebook Posts to Frontlines: An Analysis of Small Protests in the Movement for Black Lives</span> <span class="pub-status">Working paper</span></p>
-<p><span class="pub-meta">Shea Streeter</span><br> <span class="pub-meta">Presented at the 2025 Southern Political Science Association Annual Conference.</span></p>
-</div>
-<div class="pub">
-<p><span class="pub-title">The Racial Protest Gap: The Acceptability of Police Killings Among White Americans</span> <span class="pub-status">Working paper</span></p>
-<p><span class="pub-meta">Shea Streeter</span><br> <span class="pub-meta">Presented at the 2020 Midwest Political Science Association Annual Conference.</span></p>
 </div>
 
 
